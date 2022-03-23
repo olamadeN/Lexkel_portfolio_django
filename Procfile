@@ -1,0 +1,1 @@
+web: gunicorn lexkel_portfolio.wsgi
