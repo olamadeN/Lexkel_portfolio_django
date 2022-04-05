@@ -55,6 +55,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lekxel Portfolio</title>
+    <script src="https://kit.fontawesome.com/779f9ee602.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="{% static 'img/fav-icon.png' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
@@ -69,6 +70,9 @@
         <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon text-white"></span>
         </button>
+        <div class="navbar-brand" onclick="night_mode()">
+            <img id="mode-toggle-img" src="{% static 'img/mode-switch.png' %}" alt="night-mode-img" width="50%" height="">
+        </div> 
         <div class="justify-content-left collapse navbar-collapse " id="navbarNav" >
             <ul class="navbar-nav">
                 <li class="nav-item  px-0 pl-sm-1 pr-sm-2">
@@ -85,9 +89,6 @@
                 </li>
             </ul>
         </div>
-        <div class="navbar-brand" onclick="night_mode()">
-            <img id="mode-toggle-img" src="{% static 'img/mode-switch.png' %}" alt="night-mode-img" width="50%" height="">
-        </div> 
     </nav>
     <div class="intro">
         <div class="d-sm-flex" data-aos="fade-up">
@@ -155,7 +156,7 @@
                     <img class="float-left mr-4" width="8%" src="{% static 'img/Vector.png' %}" alt="">
                     <div class="p-0">
                         <p class="p-0 m-0">frontend</p>
-                        <p class="p-0 m-0">development</p>
+                        <p class="p-0 m-0">development <i id="caret-down-1" class="ml-2 fas fa-caret-down"></i></p>
                     </div>   
                 </span>
                 <ul class="drop-list ml-4" id="drop-list">
@@ -168,13 +169,14 @@
                     <li>WebRTC</li>
                 </ul>
             </div> 
-            <div class="col-sm-7 float-right p-0">
+            <div class="col-sm-7 float-right p-0 mb-2">
                 <span id="drop-click" onclick="show_list_2()">
                     <img class="float-left mr-4 " width="8%" src="{% static 'img/Vector (1).png' %}" alt="">
                     <div class="p-0">
                         <p class="p-0 m-0">backend</p>
-                        <p class="p-0 m-0">development</p>
-                    </div>  
+                        <p class="p-0 m-0">development <i id="caret-down-2" class="ml-2 fas fa-caret-down"></i></p>
+                    </div> 
+                    <i class="fa-solid fa-angle-down"></i> 
                 </span>
                 <ul class="drop-list ml-4" id="drop-list-2">
                     <li>Laravel</li>
@@ -191,10 +193,10 @@
         <div class="dropdown mt-5 d-sm-flex w-100" data-aos="fade-up">
             <div class="col-sm-7 float-left p-0">
                 <span class="drop-click" onclick="show_list_3()">
-                    <img class="float-left mr-4 " width="6%" src="{% static 'img/Vector (2).png' %}" alt="">
+                    <img class="float-left mr-4 " width="7%" src="{% static 'img/Vector (2).png' %}" alt="">
                     <div class="p-0">
                         <p class="p-0 m-0">mobile</p>
-                        <p class="p-0 m-0">development</p>
+                        <p class="p-0 m-0">development <i id="caret-up-1" class="ml-2 fas fa-caret-up"></i></p>
                     </div> 
                 </span>
                 <ul class="drop-list show ml-4" id="drop-list-3">
@@ -212,7 +214,7 @@
                     <img class="float-left mr-4 " width="10%" src="{% static 'img/Vector (3).png' %}" alt="">
                     <div class="p-0">
                         <p class="p-0 m-0">blockchain</p>
-                        <p class="p-0 m-0">engineering</p>
+                        <p class="p-0 m-0">engineering <i id="caret-up-2" class="ml-2 fas fa-caret-up"></i></p>
                     </div> 
                 </span>
                 <ul class="drop-list show ml-4" id="drop-list-4">
@@ -312,7 +314,7 @@
         </form> 
     </div>
     <footer id="footer">
-        <nav class="container navbar navbar-expand-sm navbar-light py-2 px-4">
+        <nav class="container navbar navbar-expand-lg navbar-light py-2 px-4">
             <a href="#" class="navbar-brand pl-5">
                 <img src="{% static 'img/Logo - White.png' %}" alt="logo" width="60%">
             </a>
@@ -364,7 +366,7 @@
             AOS.init(
                 {
                     offset:300,
-                    duration:1500,
+                    duration:800,
                 }
             );
 
