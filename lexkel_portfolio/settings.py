@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['lexkel-portfolio.herokuapp.com']
 
@@ -165,11 +165,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    BASE_DIR / 'staticFiles',
+    os.path.join(BASE_DIR, 'staticFiles'),
 ) 
 
 
-STATIC_ROOT = BASE_DIR / 'staticRoot'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticRoot')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
