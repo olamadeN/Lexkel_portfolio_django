@@ -1,8 +1,4 @@
 
-@font-face{
-    src: url(fonts/Montserrat/Montserrat-Black.ttf);
-    font-family:mont;
-}
 html{
     scroll-behavior: smooth !important;
 }
